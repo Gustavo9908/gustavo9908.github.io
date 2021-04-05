@@ -115,7 +115,7 @@ img.teste{
 }
 /*layout do site */
 .header{
-	background-image: linear-gradient(to right, white, black);
+	background: #1f3c58;
 }
 h1.logo{
 	font-weight: 300;
