@@ -4,37 +4,32 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-    background-image: url("../img/golf4.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+	background:
+		linear-gradient(rgba(5, 10, 18, 0.60), rgba(5, 10, 18, 0.82)),
+		url("../img/golf4.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	position: relative;
 }
 
 body::before {
 	content: "";
 	position: fixed;
 	inset: 0;
-	background: rgba(5, 10, 18, 0.62);
-	z-index: -1;
+	background: rgba(5, 10, 18, 0.18);
+	z-index: 0;
+	pointer-events: none;
 }
 
-a:link, a:active, a:visited {
-	color: #1f3c58;
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-/* Grid 960px */
-.linha {
-	width: 960px;
-	max-width: 94%;
-	margin: 0 auto;
-	overflow: auto;
-	padding: 12px 0;
+.linha,
+.header,
+.conteudo,
+.conteudo-extra,
+.footer {
+	position: relative;
+	z-index: 1;
 }
 
 .coluna {
