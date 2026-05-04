@@ -324,3 +324,88 @@ ul.noticias li p a {
 		min-height: auto;
 	}
 }
+/* ===== MENU HAMBÚRGUER CORRIGIDO ===== */
+
+.header .linha.topo {
+	width: 960px;
+	max-width: 94%;
+	margin: 0 auto;
+	min-height: 70px;
+	position: relative;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	overflow: visible !important;
+}
+
+h1.logo {
+	margin: 0 !important;
+	text-align: center;
+	color: #f3f4f6;
+	font-size: 30px;
+}
+
+.menu-toggle {
+	position: absolute !important;
+	left: 15px !important;
+	right: auto !important;
+	top: 50% !important;
+	transform: translateY(-50%);
+	background: transparent;
+	border: none;
+	color: #fff;
+	font-size: 34px;
+	cursor: pointer;
+	z-index: 1001;
+}
+
+#menu-mobile {
+	position: absolute !important;
+	top: 70px !important;
+	left: 15px !important;
+	right: auto !important;
+	display: block !important;
+	width: 210px;
+	background: rgba(15, 23, 32, 0.98);
+	border-radius: 14px;
+	padding: 12px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+	z-index: 1000;
+
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-10px);
+	transition: 0.25s ease;
+}
+
+#menu-mobile.ativo {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+#menu-mobile .menu {
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: left !important;
+}
+
+#menu-mobile .menu li {
+	display: block !important;
+	margin: 6px 0 !important;
+}
+
+#menu-mobile .menu li a {
+	display: block;
+	color: #fff !important;
+	padding: 11px 15px;
+	border-radius: 10px;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#menu-mobile .menu li a:hover {
+	background: #315e8a;
+	text-decoration: none;
+}
