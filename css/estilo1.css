@@ -4,9 +4,11 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	margin: 0;
-	color: #222;
-	background: #0f1720 url("../img/teste.jpg") center top / cover fixed no-repeat;
+    background-image: url("../img/golf4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 body::before {
