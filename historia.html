@@ -13,24 +13,24 @@
 <body>
 
 	<div class="header">
-		<div class="linha topo">
-			<div class="coluna col4">
-				<h1 class="logo">Golf do Gustavinho</h1>
-			</div>
+	<div class="linha topo">
 
-			<div class="coluna col8">
-				<nav>
-					<ul class="menu inline sem-marcador">
-						<li><a href="index.html">home</a></li>
-						<li><a href="historia.html">história</a></li>
-						<li><a href="fotos.html">fotos</a></li>
-						<li><a href="viagens.html">viagens</a></li>
-						<li><a href="contato1.html">contato</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
+		<button class="menu-toggle" onclick="abrirMenu()">☰</button>
+
+		<h1 class="logo">Golf do Gustavinho</h1>
+
+		<nav id="menu-mobile">
+			<ul class="menu sem-marcador">
+				<li><a href="index.html">home</a></li>
+				<li><a href="historia.html">história</a></li>
+				<li><a href="fotos.html">fotos</a></li>
+				<li><a href="viagens.html">viagens</a></li>
+				<li><a href="contato1.html">contato</a></li>
+			</ul>
+		</nav>
+
 	</div>
+</div>
 
 	<div class="hero">
 		<div class="linha">
@@ -131,6 +131,20 @@
 			<span>&copy; 2026 - Gustavo Bittencourt</span>
 		</div>
 	</div>
+<script>
+function abrirMenu() {
+	document.getElementById("menu-mobile").classList.toggle("ativo");
+}
 
+/* fechar clicando fora */
+document.addEventListener("click", function(e) {
+	const menu = document.getElementById("menu-mobile");
+	const botao = document.querySelector(".menu-toggle");
+
+	if (!menu.contains(e.target) && !botao.contains(e.target)) {
+		menu.classList.remove("ativo");
+	}
+});
+</script>
 </body>
 </html>
